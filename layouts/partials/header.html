@@ -1,0 +1,28 @@
+<header class="header-home{{ if .Site.Params.animate }} animated{{ end }}">
+
+    <a class="link" href="{{ ref . `about.md` }}">
+        <img class="selfie" alt="{{ .Title }}" src="/{{ .Site.Author.avatar }}" />
+    </a>
+
+    <h1 class="title">{{ .Site.Author.name }}</h1>
+    <h2 class="description">{{ .Site.Author.bio }}</h2>
+
+    <div class="social-links">
+        {{ $base_url := .Site.BaseURL }}
+        {{ range .Site.Params.social }}
+        {{ $url := .url }}
+        {{ if .relative }}
+        {{ $url := ( printf "%s%s" $base_url .url ) }}
+        {{ $dtitle := (replace $url "http://" "") }}
+        <a class="link" data-title="{{ $dtitle }}" href="{{ $url }}" target="_blank">
+            <svg class="icon icon-{{- .icon -}}"><use xlink:href="#icon-{{- .icon -}}"></use></svg>
+        </a>
+        {{ else }}
+        {{ $dtitle := (replace $url "https://" "") }}
+        <a class="link" data-title="{{ $dtitle }}" href="{{ $url }}" target="_blank">
+            <svg class="icon icon-{{- .icon -}}"><use xlink:href="#icon-{{- .icon -}}"></use></svg>
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</header>

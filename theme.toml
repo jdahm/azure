@@ -1,0 +1,18 @@
+name = "Azure"
+license = "MIT"
+licenselink = "https://github.com/jdahm/azure/blob/master/LICENSE"
+description = "A minimalist theme for Hugo"
+homepage = "https://github.com/jdahm/azure"
+tags = [ "blog", "minimal", "minimalist", "simple", "clean", "personal" ]
+features = [ "analytics", "single-column" ]
+min_version = "0.41"
+
+[author]
+  name = "Johann Dahm"
+  homepage = "http://jdahm.me"
+
+# If porting an existing theme
+[original]
+  name = "Indigo"
+  homepage = "http://koppl.in/indigo"
+  repo = "https://github.com/sergiokopplin/indigo"
