@@ -7,7 +7,7 @@ A minimalist theme for [Hugo](https://gohugo.io), based on
 Quick Start
 -----------
 
-1. Add the repository into your Hugo Project repository as a submodule, git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder.
+1. Add the repository into your Hugo Project repository as a submodule, git submodule add https://github.com/jdahm/azure.git themes/hugo-coder.
 2. Configure your config.toml. You can either use the this minimal configuration as a base, or look for a complete explanation about all configurations here. The config.toml inside the exampleSite is also a good reference.
 3. Build your site with hugo serve and see the result at http://localhost:1313/.
 
