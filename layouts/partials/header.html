@@ -1,6 +1,6 @@
 <header class="header-home{{ if .Site.Params.animate }} animated{{ end }}">
 
-    <a class="link" href="{{ ref . `about.md` }}">
+    <a class="link" href="{{ .Site.BaseURL }}">
         <img class="selfie" alt="{{ .Title }}" src="/{{ .Site.Author.avatar }}" />
     </a>
 
