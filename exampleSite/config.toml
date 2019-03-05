@@ -34,9 +34,9 @@ theme = "azure"
     icon = "mail"
     url = "myemail@gmail.com"
 
-# [[params.nav]]
-#     name = "Blog"
-#     url = "blog/"
+[[params.nav]]
+    name = "Blog"
+    url = "blog/"
 
 [[params.nav]]
     name = "Projects"

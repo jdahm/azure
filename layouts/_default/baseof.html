@@ -5,18 +5,9 @@
     </head>
     <body>
         <div class="wrapper-{{- .Site.Params.width -}}">
-            <div class="page">
-                {{ block "header" . }}
-                {{ end }}
-                {{ partial "nav.html" . }}
-                <div id="content">
-                    {{ block "main" . }}
-                    {{ .Content }}
-                    {{ end }}
-                </div>
-                {{ block "footer" . }}
-                {{ end }}
-            </div>
-            {{ partial "icons.html" . }}
+            {{ block "content" . }}
+            {{ end }}
+        </div>
+        {{ partial "icons.html" . }}
     </body>
 </html>

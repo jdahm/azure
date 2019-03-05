@@ -1,2 +1,20 @@
-{{ define "header" }}
+{{ define "content" }}
+<div class="page {{ lower .Type }}">
+    {{ partial "nav.html" . }}
+
+    {{ partial "header.html" . }}
+
+    <section class="list">
+        {{ $param := .Params }}
+        {{ range .Pages }}
+        <div class="item {{ if $param.start }}star{{ end }}">
+            <a class="url" href="{{ if $param.externalLink }}{{ $param.externalLink }}{{ else }}{{ .Permalink }}{{ end }}">
+                <aside><time datetime="{{.Date.Format "Jan 02 2006"}}">{{.Date.Format "Jan 02 2006"}}</time></aside>
+                <h3 class="title">{{ emojify .Title }}</h3>
+            </a>
+        </div>
+        {{ end }}
+    </section>
+</div>
+{{ partial "footer.html" . }}
 {{ end }}
