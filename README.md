@@ -1,6 +1,8 @@
 Azure
 =====
 
+[![Build Status](https://travis-ci.org/jdahm/azure.svg?branch=master)](https://travis-ci.org/jdahm/azure)
+
 A minimalist theme for [Hugo](https://gohugo.io), based on
 [Indigo](https://github.com/sergiokopplin/indigo) for Jekyll.
 
