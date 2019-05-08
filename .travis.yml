@@ -3,10 +3,13 @@ language: go
 go:
   - master # This uses automatically the latest version of go
 
-install:
-  - go get github.com/spf13/hugo # This provides the latest version of Hugo to Travis CI
+before_install:
+  - sudo apt-get install -y hugo
+  - git clone https://github.com/gohugoio/hugoBasicExample.git
+  - cd hugoBasicExample/themes
 
 script:
+  - cd ../../
   - hugo # This commands builds your website on travis
 
 # deploy:
