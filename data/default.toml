@@ -1,0 +1,49 @@
+[Author]
+    name = "John Doe"
+    bio = "A man who travels the world eating noodles"
+    avatar = "http://www.gravatar.com/avatar"
+
+[params]
+    description = "John Doe's personal site"
+    keywords = [ "personal-site", "programming" ]
+    animate = true
+    width = "large"
+
+[[params.social]]
+    icon = "facebook"
+    url = "https://facebook.com/myfacebook"
+    name = "Facebook"
+
+[[params.social]]
+    icon = "twitter"
+    url = "https://twitter.com/mytwitter"
+    name = "Twitter"
+
+[[params.social]]
+    icon = "github"
+    url = "https://github.com/mygithub"
+    name = "GitHub"
+
+[[params.social]]
+    icon = "medium"
+    url = "https://medium.com/@medium"
+
+[[params.social]]
+    icon = "mail"
+    url = "myemail@gmail.com"
+
+[[params.nav]]
+    name = "Blog"
+    url = "posts/"
+
+[[params.nav]]
+    name = "Portfolio"
+    url = "portfolio/"
+
+[[params.nav]]
+    name = "About"
+    url = "about/"
+
+[[params.nav]]
+    name = "Sketch"
+    url = "sketch/"

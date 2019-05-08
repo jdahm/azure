@@ -1,11 +1,13 @@
 <div class="{{- if .IsHome -}}nav-home{{- else -}}nav{{- end -}}">
-    {{ if not .IsHome }}
-    <a class="home-link" href="{{ .Site.BaseURL }}">
-        <img class="inline-selfie" alt="{{ .Title }}" src="/{{ .Site.Author.avatar }}" />
-    </a>
-    {{ end }}
+    <!-- {{ if not .IsHome }}
+         <a class="home-link" href="{{ .Site.BaseURL }}">
+         <img class="inline-selfie" alt="{{ .Title }}" src="/{{ .Site.Author.avatar }}" />
+         </a>
+         {{ end }} -->
     <ul class="list">
-        {{ range .Site.Params.nav }}
+        {{ $nav := .Site.Data.default.params.nav }}
+        {{ if (isset .Site.Params "nav") }} {{ $nav = .Site.Params.nav }} {{ end }}
+        {{ range $nav }}
         <li class="item">
             <a class="link" href="/{{- .url -}}">{{ .name }}</a>
         </li>

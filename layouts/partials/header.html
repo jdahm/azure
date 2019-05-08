@@ -1,28 +1,19 @@
-<header class="header-home{{ if .Site.Params.animate }} animated{{ end }}">
+<header class="header-home {{ if default .Site.Data.default.params.animate .Site.Params.animate }}animated{{ end }}">
 
     <a class="link" href="{{ .Site.BaseURL }}">
-        <img class="selfie" alt="{{ .Title }}" src="/{{ .Site.Author.avatar }}" />
+        <img class="selfie" alt="{{ .Title }}" src="{{ .Site.Author.avatar | default .Site.Data.default.Author.avatar }}" />
     </a>
 
-    <h1 class="title">{{ .Site.Author.name }}</h1>
-    <h2 class="description">{{ .Site.Author.bio }}</h2>
-
+    <h1 class="title">{{ .Site.Author.name | default .Site.Data.default.Author.name }}</h1>
+    <h2 class="description">{{ .Site.Author.bio | default .Site.Data.default.Author.bio }}</h2>
     <div class="social-links">
         {{ $base_url := .Site.BaseURL }}
-        {{ range .Site.Params.social }}
-        {{ $url := .url }}
-        {{ if .relative }}
-        {{ $url := ( printf "%s%s" $base_url .url ) }}
-        {{ $dtitle := (replace $url "http://" "") }}
-        <a class="link" data-title="{{ $dtitle }}" href="{{ $url }}" target="_blank">
+        {{ $social := .Site.Data.default.params.social }}
+        {{ if (isset .Site.Params "social") }} {{ $social = .Site.Params.social }} {{ end }}
+        {{ range $social }}
+        <a class="link" data-title="{{ .name | default .url }}" href="{{ .url }}" target="_blank">
             <svg class="icon icon-{{- .icon -}}"><use xlink:href="#icon-{{- .icon -}}"></use></svg>
         </a>
-        {{ else }}
-        {{ $dtitle := (replace $url "https://" "") }}
-        <a class="link" data-title="{{ $dtitle }}" href="{{ $url }}" target="_blank">
-            <svg class="icon icon-{{- .icon -}}"><use xlink:href="#icon-{{- .icon -}}"></use></svg>
-        </a>
-        {{ end }}
         {{ end }}
     </div>
 </header>
