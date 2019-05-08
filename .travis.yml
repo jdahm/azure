@@ -1,12 +1,15 @@
+os: linux
+
 language: go
 
-before_install:
-  - sudo apt-get install -y hugo
+install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.55.5/hugo_0.55.5_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
   - git clone https://github.com/gohugoio/hugoBasicExample.git
-  - cd hugoBasicExample/themes
+  - git clone https://github.com/jdahm/azure.git themes/azure
 
 script:
-  - cd ../../
+  - cd hugoBasicExample
   - hugo
 
 # deploy:
