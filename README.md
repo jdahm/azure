@@ -34,24 +34,25 @@ $ hugo serve -t lapis
 
 ## Configuration
 
-The default configuration is included in [`data/default.toml`](https://github.com/jdahm/lapis/blob/master/data/default.toml). Options in the site's `config.toml` override these defaults.
+The default configuration is included in [data/default.toml](https://github.com/jdahm/lapis/blob/master/data/default.toml). Options in the site's `config.toml` override these defaults.
 
 ### Author `.Site.Author`
 - name, bio, and avatar image: Shown on the landing and index pages
 
 ### Parameters `.Site.Params`:
-- description: Meta data on the landing page
-- width: Sets container width `[ normal | large ]` normal is `560px`, large is `810px`
-- animate: Sets a fade-in-down effect with a slight delay when loading the page
-- social: A map of social icons for the landing page
-  - icon: SVG icon, see [icons.html](https://github.com/jdahm/lapis/blob/master/layouts/partials/icons.html) for a list of those included
-  - url: link URL
-  - name: name shown on hover
-
-- nav: Navigation map
-  - name: link text
-  - url: link URL
+- **description**: Meta data on the landing page
+- **width**: [ normal | large ] container width normal is `560px`, large is `810px`
+- **animate**: If true, ets a fade-in-down effect with a slight delay when loading the page
+- **skip_nav**: If true, disables showing the navigation list
+- **skip_footer**: If true, disables showing the footer
+- **social**: A map of social icons for the landing page
+  - *icon*: SVG icon, see [icons.html](https://github.com/jdahm/lapis/blob/master/layouts/partials/icons.HTML) for a list of those included
+  - *url*: link URL
+  - *name*: name shown on hover
+- **nav**: Navigation map
+  - *name*: link text
+  - *url*: link URL
 
 ## Compatibility
 
-This theme uses SASS and SCSS, from which CSS is generated through [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/). Support for that was added in version 0.43.
+Lapis and Indigo use SASS and SCSS, from which CSS is generated through [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/). Support for that was added in version 0.43.
