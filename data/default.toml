@@ -1,7 +1,7 @@
 [Author]
     name = "John Doe"
     bio = "A man who travels the world eating noodles"
-    avatar = "http://www.gravatar.com/avatar"
+    avatar = "https://github.com/sergiokopplin/indigo/raw/gh-pages/assets/images/profile.jpg"
 
 [params]
     description = "John Doe's personal site"
