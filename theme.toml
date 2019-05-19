@@ -1,8 +1,8 @@
 name = "Azure"
 license = "MIT"
-licenselink = "https://github.com/jdahm/azure/blob/master/LICENSE"
+licenselink = "https://github.com/jdahm/lapis/blob/master/LICENSE"
 description = "A minimalist theme for Hugo"
-homepage = "https://github.com/jdahm/azure"
+homepage = "https://github.com/jdahm/lapis"
 tags = [ "blog", "minimal", "minimalist", "simple", "clean", "personal" ]
 features = [ "analytics", "single-column" ]
 min_version = "0.41"
