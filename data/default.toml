@@ -1,13 +1,11 @@
 [Author]
     name = "John Doe"
     bio = "A man who travels the world eating noodles"
-    avatar = "https://github.com/sergiokopplin/indigo/raw/gh-pages/assets/images/profile.jpg"
+    avatar = "/profile.jpg"
 
 [params]
     description = "John Doe's personal site"
     keywords = [ "personal-site", "programming" ]
-    animate = true
-    width = "large"
 
 [[params.social]]
     icon = "facebook"

@@ -1,11 +1,11 @@
-name = "Azure"
+name = "Lapis"
 license = "MIT"
 licenselink = "https://github.com/jdahm/lapis/blob/master/LICENSE"
 description = "A minimalist theme for Hugo"
 homepage = "https://github.com/jdahm/lapis"
-tags = [ "blog", "minimal", "minimalist", "simple", "clean", "personal" ]
-features = [ "analytics", "single-column" ]
-min_version = "0.41"
+tags = [ "minimal", "simple", "clean", "personal", "blog" ]
+features = [ "blog", "single-column" ]
+min_version = "0.43"
 
 [author]
   name = "Johann Dahm"

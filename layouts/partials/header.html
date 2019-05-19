@@ -1,4 +1,4 @@
-<header class="header-home {{ if default .Site.Data.default.params.animate .Site.Params.animate }}animated{{ end }}">
+<header class="header-home {{ if default true .Site.Params.animate }}animated{{ end }}">
 
     <a class="link" href="{{ .Site.BaseURL }}">
         <img class="selfie" alt="{{ .Title }}" src="{{ .Site.Author.avatar | default .Site.Data.default.Author.avatar }}" />
