@@ -21,7 +21,7 @@ $ git submodule add https://github.com/jdahm/lapis.git themes/lapis
 $ hugo serve -t lapis
 ```
 
-Alternatively, the theme may be set in the `config.toml` file by adding `theme = lapis`. See the [Hugo documentation](https://gohugo.io/themes/) for more information.
+Alternatively, the theme may be set in the `config.toml` file by adding `theme = lapis`. See the [Hugo docs](https://gohugo.io/themes/) for more information.
 
 The theme is tested with the `hugoBasicExample` template. To run this yourself and see the example site, clone that site and follow the procedure above:
 
@@ -34,24 +34,30 @@ $ hugo serve -t lapis
 
 ## Configuration
 
-The default configuration is included in [data/default.toml](https://github.com/jdahm/lapis/blob/master/data/default.toml). Options in the site's `config.toml` override these defaults.
+The default configuration is included in [data/default.toml](https://github.com/jdahm/lapis/blob/master/data/default.toml). Options in the site's `config.toml` override these defaults. The defaults are provided both to show how this is done, as well as provide defaults for the `hugoBasicExample` test.
 
 ### Author `.Site.Author`
-- name, bio, and avatar image: Shown on the landing and index pages
+The following options control the header, shown on the landing and index pages
 
-### Parameters `.Site.Params`:
+- **name**: Name of site owner
+- **bio**: A short bio shown below the name
+- **avatar**: Square-ish image shown above name
+
+### Site Params `.Site.Params`
+The following go in the `[params]` section.
+
 - **description**: Meta data on the landing page
 - **width**: [ normal | large ] container width normal is `560px`, large is `810px`
 - **animate**: If true, ets a fade-in-down effect with a slight delay when loading the page
 - **skip_nav**: If true, disables showing the navigation list
 - **skip_footer**: If true, disables showing the footer
 - **social**: A map of social icons for the landing page
-  - *icon*: SVG icon, see [icons.html](https://github.com/jdahm/lapis/blob/master/layouts/partials/icons.HTML) for a list of those included
-  - *url*: link URL
-  - *name*: name shown on hover
+  - **icon**: SVG icon, see [icons.html](https://github.com/jdahm/lapis/blob/master/layouts/partials/icons.HTML) for a list of those included
+  - **url**: link URL
+  - **name**: name shown on hover
 - **nav**: Navigation map
-  - *name*: link text
-  - *url*: link URL
+  - **name**: link text
+  - **url**: link URL
 
 ## Compatibility
 
