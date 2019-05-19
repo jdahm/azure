@@ -1,23 +1,31 @@
 Azure
 =====
 
+[![Build Status](https://travis-ci.org/jdahm/azure.svg?branch=master)](https://travis-ci.org/jdahm/azure)
+
 A minimalist theme for [Hugo](https://gohugo.io), based on
 [Indigo](https://github.com/sergiokopplin/indigo) for Jekyll.
 
 Quick Start
 -----------
 
-To serve the example site ensure Hugo is installed and run the following command from the base directory of this repository:
+To use this in your own site, clone into the `themes/` directory and test it out:
 
-``` shell
-hugo serve --source=exampleSite --themesDir=../../
+``` bash
+$ git submodule add https://github.com/jdahm/azure.git themes/azure
+$ hugo serve -t azure
 ```
 
-To use in your own project:
+Alternatively, the theme can be set in the `config.toml` file by adding `theme = azure` to the top level.
 
-1. Add the repository into your Hugo Project repository as a submodule, git submodule add https://github.com/jdahm/azure.git themes/azure.
-2. Configure your config.toml. You can either use the this minimal configuration as a base, or look for a complete explanation about all configurations here. The config.toml inside the exampleSite is also a good reference.
-3. Build your site with hugo serve and see the result at http://localhost:1313/.
+The theme itself can be tested with the `hugoBasicExample` site. To do this, clone that site and follow the procedure above:
+
+```bash
+$ git clone https://github.com/gohugoio/hugoBasicExample.git
+$ cd hugoBasicExample
+$ git submodule add https://github.com/jdahm/azure.git themes/azure
+$ hugo serve -t azure
+```
 
 License
 -------

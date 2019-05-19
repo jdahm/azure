@@ -4,7 +4,7 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div class="wrapper-{{- .Site.Params.width -}}">
+        <div class="wrapper-{{- default "large" .Site.Params.width -}}">
             {{ block "content" . }}
             {{ end }}
         </div>

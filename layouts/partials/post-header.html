@@ -1,0 +1,9 @@
+<h1 class="title">{{ .Title }}</h1>
+
+<span class="date">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+    -
+    <span class="reading-time" title="Estimated read time">{{ .ReadingTime }} {{ if gt .ReadingTime 1 }}MINS{{ else }}MIN{{ end }}</span>
+</span>
+
+{{ partial "tags.html" . }}
