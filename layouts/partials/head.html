@@ -8,7 +8,8 @@
 
 <meta name="keywords" content="{{ if .IsHome }}{{ range $i, $v := .Site.Params.keywords }}{{ if $i }}, {{ end }}{{ . }}{{ end }}{{ else }}{{ range $i, $v := .Keywords }}{{ if $i }}, {{ end }}{{ . }}{{ end }}{{ end }}" />
 
-{{ $style := resources.Get "style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "style.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 {{ if .Site.Params.css }}

@@ -48,6 +48,7 @@ The following go in the `[params]` section.
 
 - **description**: Meta data on the landing page
 - **width**: [ normal | large ] container width normal is `560px`, large is `810px`
+- **css**: Path to custom stylesheet
 - **animate**: If true, ets a fade-in-down effect with a slight delay when loading the page
 - **skip_nav**: If true, disables showing the navigation list
 - **skip_footer**: If true, disables showing the footer
