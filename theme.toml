@@ -1,18 +1,17 @@
 name = "Lapis"
 license = "MIT"
 licenselink = "https://github.com/jdahm/lapis/blob/master/LICENSE"
-description = "A minimalist theme for Hugo"
+description = "A light and minimalist theme for Hugo"
 homepage = "https://github.com/jdahm/lapis"
 tags = [ "minimal", "simple", "clean", "personal", "blog" ]
 features = [ "blog", "single-column" ]
 min_version = "0.43"
 
 [author]
-  name = "Johann Dahm"
-  homepage = "http://jdahm.me"
+    name = "Johann Dahm"
+    homepage = "http://jdahm.me"
 
-# If porting an existing theme
 [original]
-  name = "Indigo"
-  homepage = "http://koppl.in/indigo"
-  repo = "https://github.com/sergiokopplin/indigo"
+    name = "Indigo"
+    homepage = "http://koppl.in/indigo"
+    repo = "https://github.com/sergiokopplin/indigo"
