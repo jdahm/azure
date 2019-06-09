@@ -5,16 +5,8 @@ if [ ! -d .git ]; then
     exit 1
 fi
 
-name=hugoBasicExample
-repo=gohugoio/$name
-url=https://github.com/$repo/archive/master.tar.gz
-dir=$name-master
-
-# Download archive
-[ ! -d master.tar.gz ] && wget $url
-
-# Extract archive
-[ ! -d $dir ] && tar xzf master.tar.gz
+# Example site here
+dir=exampleSite
 
 # Build
 (cd $dir && hugo --themesDir=../../ -t lapis)

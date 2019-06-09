@@ -23,18 +23,16 @@ $ hugo serve -t lapis
 
 Alternatively, the theme may be set in the `config.toml` file by adding `theme = lapis`. See the [Hugo docs](https://gohugo.io/themes/) for more information.
 
-The theme is tested with the `hugoBasicExample` template. To run this yourself and see the example site, clone that site and follow the procedure above:
+The theme contains a simple example, `exampleSite`. To run this yourself and see the site,
 
 ```bash
-$ git clone https://github.com/gohugoio/hugoBasicExample.git
-$ cd hugoBasicExample
-$ git clone https://github.com/jdahm/lapis.git themes/lapis
-$ hugo serve -t lapis
+$ cd exampleSite
+$ hugo serve --themesDir=../../ -t lapis
 ```
 
 ## Configuration
 
-The default configuration is included in [data/default.toml](https://github.com/jdahm/lapis/blob/master/data/default.toml). Options in the site's `config.toml` override these defaults. The defaults are provided both to show how this is done, as well as provide defaults for the `hugoBasicExample` test.
+An example of the options available at the top-level is shown in [exampleSite/config.toml](https://github.com/jdahm/lapis/blob/master/exampleSite/config.toml).
 
 ### Author `.Site.Author`
 The following options control the header, shown on the landing and index pages
