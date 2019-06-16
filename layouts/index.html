@@ -2,9 +2,7 @@
 <div class="page {{ lower .Title }}">
     {{ partial "header.html" . }}
 
-    {{ if not .Site.Params.skip_nav }}
     {{ partial "nav.html" . }}
-    {{ end }}
 
     {{ .Content }}
 

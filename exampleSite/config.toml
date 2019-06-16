@@ -9,8 +9,8 @@ Description = "John Doe's personal site"
 
 [params]
     keywords = [ "personal-site", "programming" ]
-    skip_footer = true
-    skip_nav = true
+    skip_footer = false
+    skip_nav = false
     animate = true
     star = false
 
