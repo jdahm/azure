@@ -1,5 +1,10 @@
 <div class="{{- if .IsHome -}}nav-home{{- else -}}nav{{- end -}}">
     <ul class="list">
+        {{ if not .IsHome }}
+        <li class="item">
+            <a class="link" href="{{ .Site.BaseURL }}/">Home</a>
+        </li>
+        {{ end }}
         {{ range .Site.Menus.main }}
         <li class="item">
             <a class="link" href="/{{- .URL -}}">{{ .Name }}</a>
