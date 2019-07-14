@@ -16,9 +16,9 @@
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.css }}" />
 {{ end }}
 
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{- if .Site.IsServer -}}
+<meta name="robots" content="noindex, nofollow">
+{{ else }}
 <meta name="robots" content="index, follow">
 {{ template "_internal/google_analytics_async.html" . }}
-{{ else }}
-<meta name="robots" content="noindex, nofollow">
 {{ end }}

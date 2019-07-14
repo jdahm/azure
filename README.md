@@ -49,7 +49,6 @@ The following go in the `[params]` section.
 - **css**: Path to custom stylesheet
 - **animate**: If true, ets a fade-in-down effect with a slight delay when loading the page
 - **skipFooter**: If true, disables the footer on the landing page
-- **production**: If true, always builds in production mode
 - **googleAnalytics**: Provide the tracking ID if desired
 - **social**: A map of social icons for the landing page
   - **icon**: SVG icon, see [icons.html](https://github.com/jdahm/lapis/blob/master/layouts/partials/icons.HTML) for a list of those included
@@ -61,7 +60,7 @@ The following go in the `[params]` section.
 
 ## Analytics and Indexing
 
-By default, search engine indexing and analytics collection will be disabled, unless the environment variable `HUGO_ENV=production` or the variable `.Site.Params.production=true`. This option controls the content in the headers and `robots.txt`.
+By default, search engine indexing and analytics collection will be enabled if the site is built without using the internal Hugo server. See `.Site.IsServer` in the [Site variables](https://gohugo.io/variables/site/) for more information.
 
 ## Compatibility
 

@@ -1,6 +1,6 @@
 User-agent: *
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-  Disallow:
+{{- if .Site.IsServer -}}
+Disallow: /
 {{ else }}
-  Disallow: /
+Disallow:
 {{ end }}
